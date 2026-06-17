@@ -1,0 +1,19 @@
+[project]
+name = "security-scanner"
+version = "0.1.0"
+description = "FastMCP network security scanner server for Claude Code"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=0.1.0",
+    "python-nmap>=0.7.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+security-scanner = "local_scanner:run_server"
